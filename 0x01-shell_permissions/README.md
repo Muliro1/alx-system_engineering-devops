@@ -12,3 +12,4 @@ THIS IS A COLLECTION OF SCRIPTS TO PERFORM VAROIUS TASKS ON THE LINUX TERMINAL.
 10. chmod 753.
 11. chmod --reference-olleh hello Mirror's olleh's permissions to hello.
 12. chmod -R ugo+X.
+13. mkdir -m 751 my_dir creates a directory with 751 permissions.
