@@ -14,3 +14,4 @@ THIS IS A COLLECTION OF SCRIPTS TO PERFORM VAROIUS TASKS ON THE LINUX TERMINAL.
 12. chmod -R ugo+X.
 13. mkdir -m 751 mydir creates a directory with 751 permissions.
 14. chgrp chool hello changes the owning group of the hello file to school.
+15. chown vincent:staff . 
