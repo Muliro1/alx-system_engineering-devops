@@ -6,3 +6,4 @@ THIS IS A COLLECTION OF SCRIPTS TO PERFORM VAROIUS TASKS ON THE LINUX TERMINAL.
 4. chown Betty hello changes ownership of the file hello to Betty
 5. touch hello creates an empty file called hello.
 6. chmod u+x hello gives x permission to the owner of the hello file.
+7. chmod ugo+x add execute permission for everybody on the hello file.
