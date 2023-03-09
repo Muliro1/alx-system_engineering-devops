@@ -9,4 +9,5 @@ THIS IS A COLLECTION OF SCRIPTS TO PERFORM VAROIUS TASKS ON THE LINUX TERMINAL.
 7. chmod ugo+x add execute permission for everybody on the hello file.
 8. chmod u+x,g+x,o+r hello
 9. chmod 007 only other users permissions, nothing for owner nad group.
-10. chmod 753
+10. chmod 753.
+11. chmod --reference-olleh hello Mirror's olleh's permissions to hello.
