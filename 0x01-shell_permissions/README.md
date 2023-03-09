@@ -11,3 +11,4 @@ THIS IS A COLLECTION OF SCRIPTS TO PERFORM VAROIUS TASKS ON THE LINUX TERMINAL.
 9. chmod 007 only other users permissions, nothing for owner nad group.
 10. chmod 753.
 11. chmod --reference-olleh hello Mirror's olleh's permissions to hello.
+12. chmod -R ugo+X.

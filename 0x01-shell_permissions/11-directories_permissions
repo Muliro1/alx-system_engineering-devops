@@ -1,0 +1,2 @@
+#!/bin/hash
+chmod -R ugo+X
