@@ -1,21 +1,12 @@
 #!/usr/bin/env bash
-#this script audits dns records
+#Double the number of webservers
 
-function add_subdomain {
-	local domain="$1"
-	local subdomain="$2"
-
-	if [ -z "$subdomain" ]; then
-	    subdomains=("www" "lb-01" "web-01" "web-02")
-	else
-	    subdomains=("$subdomain")
-	fi
-	
-	for sub in ${subdomains[0]}; do
-	    record_type=$(dig "$sub.$domain" | awk '/ANSWER SECTION/ {getline; print $4}')
-		destination=$(dig "$sub.$domain" | awk '/ANSWER SECTION/ {getline; print $5}')
-		echo "The subdomain $sub is a $record_type record and points to $destination"
-	done
-}
-
-add_subdomain "$1" "$2"
+if [ "$#" -eq 1 ]; then
+    echo "$(dig www.$1 | awk '/ANSWER SECTION:/ {getline; print "The subdomain www is a "$4" record and points to "$5}')"
+    echo "$(dig lb-01.$1 | awk '/ANSWER SECTION:/ {getline; print "The subdomain lb-01 is a "$4" record and points to "$5}')"
+    echo "$(dig web-01.$1 | awk '/ANSWER SECTION:/ {getline; print "The subdomain web-01 is a "$4" record and points to "$5}')"
+    echo "$(dig web-02.$1 | awk '/ANSWER SECTION:/ {getline; print "The subdomain web-02 is a "$4" record and points to "$5}')"
+elif [ "$#" -eq 2 ]; then
+    subdomain=$2
+    echo "$(dig $subdomain.$1 | awk '/ANSWER SECTION:/ {getline; print "The subdomain '"$subdomain"' is a "$4" record and points to "$5}')"
+fi
