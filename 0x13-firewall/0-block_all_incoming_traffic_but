@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#configure ufw
+#configure ufw on server
 
 sudo apt-get update
 sudo apt-get install ufw -y
