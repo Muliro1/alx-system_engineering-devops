@@ -14,7 +14,8 @@ if __name__ == "__main__":
     sessionReq = requests.Session()
 
     id_Emp = argv[1]
-    id_URL = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(id_Emp)
+    id_URL = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format
+    (id_Emp)
     name_URL = 'https://jsonplaceholder.typicode.com/users/{}'.format(id_Emp)
 
     employee = sessionReq.get(id_URL)
