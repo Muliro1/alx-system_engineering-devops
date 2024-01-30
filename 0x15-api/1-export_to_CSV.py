@@ -13,14 +13,14 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    sessionReq = requests.Session()
+    session_Req = requests.Session()
 
     id_E = argv[1]
     id_URL = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(id_E)
     name_URL = 'https://jsonplaceholder.typicode.com/users/{}'.format(id_E)
 
-    employee = sessionReq.get(id_URL)
-    employeeName = sessionReq.get(name_URL)
+    employee = session_Req.get(id_URL)
+    employeeName = session_Req.get(name_URL)
 
     json_req = employee.json()
     usr = employeeName.json()['username']
