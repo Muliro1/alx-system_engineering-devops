@@ -17,6 +17,7 @@ KillMode=mixed
 TimeoutStopSec=5
 PrivateTmp=true
 Restart=always
+SyslogIdentifier=gunicorn
 
 [Install]
 WantedBy=multi-user.target
