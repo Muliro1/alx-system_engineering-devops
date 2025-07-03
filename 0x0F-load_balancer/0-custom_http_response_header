@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2154
 # configure web-02 to be identical to web-01
 # The name of the custom HTTP header must be X-Served-By
 # The value of the custom HTTP header must be the hostname of the server Nginx is running on
@@ -30,5 +31,5 @@ server_config=\
 	}
 }"
 
-echo "$server_config" > /etc/nginx/sites-enabled/default
+echo "$server_config" | sudo tee /etc/nginx/sites-enabled/default
 sudo service nginx restart
